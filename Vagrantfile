@@ -19,7 +19,6 @@ Vagrant::configure("2") do |config|
   # Configure Selenium Grid
   config.vm.define :'selenium-grid' do |selenium_grid|
 		selenium_grid.vm.network :private_network, ip: "192.168.10.100"
-		selenium_grid.vm.forward_port 80, 8082
         selenium_grid.vm.hostname = "selenium.local.vm"
         selenium_grid.vm.provider :virtualbox do |vb|
           vb.customize [
