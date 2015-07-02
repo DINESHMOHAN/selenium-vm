@@ -24,7 +24,7 @@ Vagrant::configure("2") do |config|
           vb.customize [
                         "modifyvm", :id,
                         "--name", "selenium-grid",
-                        "--memory", "1024",
+                        "--memory", "2048",
                         "--cpus", 1,
                        ]
         end
@@ -44,7 +44,7 @@ Vagrant::configure("2") do |config|
           vb.customize [
                         "modifyvm", :id,
                         "--name", "node1",
-                        "--memory", "1024",
+                        "--memory", "2048",
                         "--cpus", 1,
                        ]
         end
@@ -64,7 +64,7 @@ Vagrant::configure("2") do |config|
           vb.customize [
                         "modifyvm", :id,
                         "--name", "node2",
-                        "--memory", "1024",
+                        "--memory", "2048",
                         "--cpus", 1,
                        ]
         end
@@ -84,7 +84,7 @@ Vagrant::configure("2") do |config|
           vb.customize [
                         "modifyvm", :id,
                         "--name", "node3",
-                        "--memory", "1024",
+                        "--memory", "2048",
                         "--cpus", 1,
                        ]
         end
