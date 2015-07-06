@@ -18,7 +18,7 @@ Vagrant::configure("2") do |config|
   
   # Configure Selenium Grid
   config.vm.define :'selenium-grid' do |selenium_grid|
-		selenium_grid.vm.network :private_network, ip: "192.168.10.100"
+		selenium_grid.vm.network :private_network, ip: "192.168.10.10"
         selenium_grid.vm.hostname = "gridhub"
         selenium_grid.vm.provider :virtualbox do |vb|
           vb.customize [
@@ -38,7 +38,7 @@ Vagrant::configure("2") do |config|
 
     # Configure Selenium Node
   config.vm.define :'node1' do |grid_node|
-    grid_node.vm.network :private_network, ip: "192.168.10.101"
+    grid_node.vm.network :private_network, ip: "192.168.10.11"
         grid_node.vm.hostname = "slave1"
         grid_node.vm.provider :virtualbox do |vb|
           vb.customize [
@@ -58,7 +58,7 @@ Vagrant::configure("2") do |config|
 
     # Configure Selenium Node
   config.vm.define :'node2' do |grid_node|
-    grid_node.vm.network :private_network, ip: "192.168.10.102"
+    grid_node.vm.network :private_network, ip: "192.168.10.12"
         grid_node.vm.hostname = "slave2"
         grid_node.vm.provider :virtualbox do |vb|
           vb.customize [
@@ -78,7 +78,7 @@ Vagrant::configure("2") do |config|
 
     # Configure Selenium Node
   config.vm.define :'node3' do |grid_node|
-    grid_node.vm.network :private_network, ip: "192.168.10.103"
+    grid_node.vm.network :private_network, ip: "192.168.10.13"
         grid_node.vm.hostname = "slave3"
         grid_node.vm.provider :virtualbox do |vb|
           vb.customize [
